@@ -24,7 +24,7 @@ const CommentCreate = ({ postId }) => {
 						onChange={(e) => setText(e.target.value)}
 					/>
 				</div>
-				<button className='btn btn-alert'>Submit</button>
+				<button className='btn btn-danger'>Submit</button>
 			</form>
 		</div>
 	);
