@@ -7,9 +7,13 @@ const CommentCreate = ({ postId }) => {
 	const onSubmit = async (event) => {
 		event.preventDefault();
 
-		await axios.post(`http://localhost:4001/posts/${postId}/comments`, {
-			content: text,
-		});
+		await axios
+			.post(`http://localhost:4001/posts/${postId}/comments`, {
+				content: text,
+			})
+			.catch((err) => {
+				console.log(err);
+			});
 
 		setText('');
 	};
